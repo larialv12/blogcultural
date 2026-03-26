@@ -7,15 +7,12 @@ function Menu() {
     <div className="container flex justify-between text-lg mx-8">
         Blog Cultural
 
-        <div className='flex  justify-items-center'>
-
-          
-            Eventos
-            Artistas
-            Locais
-            Noticias
-            
-        </div>
+          <div className='flex items-center gap-6'>
+      <span>Eventos</span>
+      <span>Artistas</span>
+      <span>Locais</span>
+      <span>Noticias</span>
+    </div>
     </div>
 </div>  )
 }
