@@ -1,87 +1,102 @@
-import React from 'react';
+﻿import React from 'react';
 
-export default function App() {
+const cards = [
+  {
+    id: 1,
+    title: 'Festival de Cinema',
+    subtitle: 'Mostra reúne producoes independentes',
+    // price: 'Cultura',
+    // oldPrice: 'Destaque',
+    image: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1200&q=80',
+  },
+  {
+    id: 2,
+    title: 'Nova Exposicao de Arte',
+    subtitle: 'Galeria abre temporada com artistas locais',
+    // price: 'Artes Visuais',
+    // oldPrice: 'Exposicao',
+    image: 'https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=1200&q=80',
+  },
+  {
+    id: 3,
+    title: 'Teatro em Cartaz',
+    subtitle: 'Peca contemporanea lota a cena cultural',
+    // price: 'Teatro',
+    // oldPrice: 'Em Cartaz',
+    image: 'https://images.unsplash.com/photo-1503095396549-807759245b35?auto=format&fit=crop&w=1200&q=80',
+  },
+  {
+    id: 4,
+    title: 'Musica ao Vivo',
+    subtitle: 'Agenda de shows movimenta a cidade',
+    // price: 'Musica',
+    // oldPrice: 'Agenda',
+    image: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=1200&q=80',
+  },
+  {
+    id: 5,
+    title: 'Feira Literaria',
+    subtitle: 'Autores e editoras em encontro especial',
+    // price: 'Literatura',
+    // oldPrice: 'Evento',
+    image: 'https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=1200&q=80',
+  },
+  {
+    id: 6,
+    title: 'Patrimonio Historico',
+    subtitle: 'Projeto valoriza memoria e identidade',
+    // price: 'Historia',
+    // oldPrice: 'Especial',
+    image: 'https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?auto=format&fit=crop&w=1200&q=80',
+  },
+  {
+    id: 7,
+    title: 'Patrimonio Historico',
+    subtitle: 'Projeto valoriza memoria e identidade',
+    // price: 'Historia',
+    // oldPrice: 'Especial',
+    image: 'https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?auto=format&fit=crop&w=1200&q=80',
+  },{
+   id: 8,
+    title: 'Patrimonio Historico',
+    subtitle: 'Projeto valoriza memoria e identidade',
+    // price: 'Historia',
+    // oldPrice: 'Especial',
+    image: 'https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?auto=format&fit=crop&w=1200&q=80',
+  },
+];
+
+export default function Cards() {
   return (
-    <div className="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16">
-
-      <div className="border-b mb-5 flex justify-between text-sm">
-        <div className="text-indigo-600 flex items-center pb-2 pr-2 border-b-2 border-indigo-600 uppercase">
-
-          <svg
-            className="h-6 mr-3"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 455.005 455.005"
+    <section className='w-full  px-6 py-10'>
+      <div className='mx-auto flex w-[90%] flex-row flex-wrap justify-between gap-y-6'>
+        {cards.map((card) => (
+          <article
+            key={card.id}
+            className='flex w-full flex-col overflow-hidden rounded-none sm:w-[48%] lg:w-[24%]'
           >
-            <g>
-              <path d="M446.158,267.615c-5.622-3.103-12.756-2.421-19.574,1.871l-125.947,79.309c-3.505,2.208-4.557,6.838-2.35,10.343c2.208,3.505,6.838,4.557,10.343,2.35l125.947-79.309c2.66-1.675,4.116-1.552,4.331-1.432c0.218,0.12,1.096,1.285,1.096,4.428c0,8.449-6.271,19.809-13.42,24.311l-122.099,76.885c-6.492,4.088-12.427,5.212-16.284,3.084c-3.856-2.129-6.067-7.75-6.067-15.423c0-19.438,13.896-44.61,30.345-54.967l139.023-87.542c2.181-1.373,3.503-3.77,3.503-6.347s-1.323-4.974-3.503-6.347L184.368,50.615c-2.442-1.538-5.551-1.538-7.993,0L35.66,139.223C15.664,151.815,0,180.188,0,203.818v4c0,23.63,15.664,52.004,35.66,64.595l209.292,131.791c3.505,2.207,8.136,1.154,10.343-2.35c2.207-3.505,1.155-8.136-2.35-10.343L43.653,259.72C28.121,249.941,15,226.172,15,207.818v-4c0-18.354,13.121-42.122,28.653-51.902l136.718-86.091l253.059,159.35l-128.944,81.196c-20.945,13.189-37.352,42.909-37.352,67.661c0,13.495,4.907,23.636,13.818,28.555c3.579,1.976,7.526,2.956,11.709,2.956c6.231,0,12.985-2.176,19.817-6.479l122.099-76.885c11.455-7.213,20.427-23.467,20.427-37.004C455.004,277.119,451.78,270.719,446.158,267.615z" />
-              <path d="M353.664,232.676c2.492,0,4.928-1.241,6.354-3.504c2.207-3.505,1.155-8.136-2.35-10.343l-173.3-109.126c-3.506-2.207-8.136-1.154-10.343,2.35c-2.207,3.505-1.155,8.136,2.35,10.343l173.3,109.126C350.916,232.303,352.298,232.676,353.664,232.676z" />
-              <path d="M323.68,252.58c2.497,0,4.938-1.246,6.361-3.517c2.201-3.509,1.14-8.138-2.37-10.338L254.46,192.82c-3.511-2.202-8.139-1.139-10.338,2.37c-2.201,3.51-1.14,8.138,2.37,10.338l73.211,45.905C320.941,252.21,322.318,252.58,323.68,252.58z" />
-              <path d="M223.903,212.559c-3.513-2.194-8.14-1.124-10.334,2.39c-2.194,3.514-1.124,8.14,2.39,10.334l73.773,46.062c1.236,0.771,2.608,1.139,3.965,1.139c2.501,0,4.947-1.251,6.369-3.529c2.194-3.514,1.124-8.14-2.39-10.334L223.903,212.559z" />
-              <path d="M145.209,129.33l-62.33,39.254c-2.187,1.377-3.511,3.783-3.503,6.368s1.345,4.983,3.54,6.348l74.335,46.219c1.213,0.754,2.586,1.131,3.96,1.131c1.417,0,2.833-0.401,4.071-1.201l16.556-10.7c3.479-2.249,4.476-6.891,2.228-10.37c-2.248-3.479-6.891-4.475-10.37-2.228l-12.562,8.119l-60.119-37.38l48.2-30.355l59.244,37.147l-6.907,4.464c-3.479,2.249-4.476,6.891-2.228,10.37c2.249,3.479,6.894,4.476,10.37,2.228l16.8-10.859c2.153-1.392,3.446-3.787,3.429-6.351c-0.018-2.563-1.344-4.94-3.516-6.302l-73.218-45.909C150.749,127.792,147.647,127.795,145.209,129.33z" />
-              <path d="M270.089,288.846c2.187-3.518,1.109-8.142-2.409-10.329l-74.337-46.221c-3.518-2.188-8.143-1.109-10.329,2.409c-2.187,3.518-1.109,8.142,2.409,10.329l74.337,46.221c1.232,0.767,2.601,1.132,3.953,1.132C266.219,292.387,268.669,291.131,270.089,288.846z" />
-              <path d="M53.527,192.864c-2.187,3.518-1.109,8.142,2.409,10.329l183.478,114.081c1.232,0.767,2.601,1.132,3.953,1.132c2.506,0,4.956-1.256,6.376-3.541c2.187-3.518,1.109-8.142-2.409-10.329L63.856,190.455C60.338,188.266,55.714,189.346,53.527,192.864z" />
-            </g>
-          </svg>
+            <div className='relative h-52 w-full'>
+              <img
+                src={card.image}
+                alt={card.title}
+                className='h-full w-full object-cover'
+              />
+              <span className=''>
+                {/* Sale */}
+              </span>
+            </div>
 
-          <a href="#" className="font-semibold inline-block">
-            Cooking Blog
-          </a>
-        </div>
+            <div className='w-full p-4'>
+              <h3 className='text-lg font-bold text-gray-900'>{card.title}</h3>
+              <p className='mt-1 text-sm text-gray-500'>{card.subtitle}</p>
 
-        <a href="#">See All</a>
+              <button className='mt-4 w-full rounded-lg bg-indigo-600 py-2 text-sm font-medium text-white transition-colors hover:bg-indigo-700'>
+                Ver detalhes
+              </button>
+            </div>
+          </article>
+        ))}
       </div>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
-
-        {/* CARD 1 */}
-        <div className="rounded overflow-hidden shadow-lg flex flex-col">
-          <div className="relative">
-            <img className="w-full" src="https://images.pexels.com/photos/61180/pexels-photo-61180.jpeg" alt="" />
-            <div className="absolute inset-0 bg-gray-900 opacity-25 hover:bg-transparent transition"></div>
-          </div>
-          <div className="px-6 py-4 mb-auto">
-            <a href="#" className="font-medium text-lg hover:text-indigo-600">
-              Simplest Salad Recipe ever
-            </a>
-            <p className="text-gray-500 text-sm">
-              Lorem Ipsum is simply dummy text of the printing industry.
-            </p>
-          </div>
-        </div>
-
-        {/* CARD 2 */}
-        <div className="rounded overflow-hidden shadow-lg flex flex-col">
-          <div className="relative">
-            <img className="w-full" src="https://images.pexels.com/photos/1600727/pexels-photo-1600727.jpeg" alt="" />
-            <div className="absolute inset-0 bg-gray-900 opacity-25 hover:bg-transparent transition"></div>
-          </div>
-          <div className="px-6 py-4 mb-auto">
-            <a href="#" className="font-medium text-lg hover:text-indigo-600">
-              Best FastFood Ideas (Yummy)
-            </a>
-            <p className="text-gray-500 text-sm">
-              Lorem Ipsum is simply dummy text of the printing industry.
-            </p>
-          </div>
-        </div>
-
-        {/* CARD 3 */}
-        <div className="rounded overflow-hidden shadow-lg flex flex-col">
-          <div className="relative">
-            <img className="w-full" src="https://images.pexels.com/photos/6086/food-salad-healthy-vegetables.jpg" alt="" />
-            <div className="absolute inset-0 bg-gray-900 opacity-25 hover:bg-transparent transition"></div>
-          </div>
-          <div className="px-6 py-4 mb-auto">
-            <a href="#" className="font-medium text-lg hover:text-indigo-600">
-              Why to eat salad?
-            </a>
-            <p className="text-gray-500 text-sm">
-              Lorem Ipsum is simply dummy text of the printing industry.
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </div>
+    </section>
   );
 }

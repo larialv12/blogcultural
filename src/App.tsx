@@ -6,6 +6,8 @@ import Home from './pages/Home/Home'
 import Menu from './pages/Menu/Menu'
 import Cards from './pages/Cards/Cards'
 import Banner from './pages/Banner/Banner'
+import Artistas from './pages/Artistas/Artistas'
+import Footer from './pages/footer/footer'
 // import './App.css'
 
 function App() {
@@ -16,6 +18,9 @@ function App() {
       <Banner/>
       <Home/>
       <Cards/>
+      <Artistas/>
+      <Footer/>
+
 
     </>
   )
