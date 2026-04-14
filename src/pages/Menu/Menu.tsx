@@ -2,12 +2,12 @@
 function Menu() {
   return (
 <div className='w-full flex justify-center py-4
-                bg-indigo-900 text-white'>
+                 text-black'>
 
-    <div className=" text-2xl container flex justify-between text-lg mx-8 font-bold text-white">
+    <div className=" text-2xl container flex justify-between text-lg mx-8 font-bold text-black">
         Blog Cultural
 
-          <div className='flex items-center gap-6 font-semibold text-white text-xl'>
+          <div className='flex items-center gap-6 font-bold text-black text-xl'>
       <span>Eventos</span>
       <span>Artistas</span>
       <span>Locais</span>

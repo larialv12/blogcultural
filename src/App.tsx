@@ -8,6 +8,7 @@ import Cards from './pages/Cards/Cards'
 import Banner from './pages/Banner/Banner'
 import Artistas from './pages/Artistas/Artistas'
 import Footer from './pages/footer/footer'
+import Divulga from './pages/divulga/divulga'
 // import './App.css'
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       <Banner/>
       <Home/>
       <Cards/>
+      <Divulga/>
       <Artistas/>
       <Footer/>
 

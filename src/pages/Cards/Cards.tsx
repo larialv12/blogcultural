@@ -1,101 +1,78 @@
-﻿import React from 'react';
+import React from 'react';
+
+const featuredCard = {
+  title: 'Concertos Candlelight em Sao Paulo',
+  headline: 'Candlelight traz para voce a melhor musica de uma forma nunca antes vista!',
+  image:
+    'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1200&q=80',
+};
 
 const cards = [
   {
     id: 1,
-    title: 'Festival de Cinema',
-    subtitle: 'Mostra reúne producoes independentes',
-    // price: 'Cultura',
-    // oldPrice: 'Destaque',
-    image: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1200&q=80',
+    title: 'Pinte um quadro ou taca com um artista',
+    image:
+      'https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=1200&q=80',
   },
   {
     id: 2,
-    title: 'Nova Exposicao de Arte',
-    subtitle: 'Galeria abre temporada com artistas locais',
-    // price: 'Artes Visuais',
-    // oldPrice: 'Exposicao',
-    image: 'https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=1200&q=80',
+    title: 'Traslado privativo do aeroporto de Guarulhos (GRU) para Sao Paulo',
+    image:
+      'https://images.unsplash.com/photo-1606836591695-4d58a73eba1e?auto=format&fit=crop&w=1200&q=80',
   },
   {
     id: 3,
-    title: 'Teatro em Cartaz',
-    subtitle: 'Peca contemporanea lota a cena cultural',
-    // price: 'Teatro',
-    // oldPrice: 'Em Cartaz',
-    image: 'https://images.unsplash.com/photo-1503095396549-807759245b35?auto=format&fit=crop&w=1200&q=80',
-  },
-  {
-    id: 4,
-    title: 'Musica ao Vivo',
-    subtitle: 'Agenda de shows movimenta a cidade',
-    // price: 'Musica',
-    // oldPrice: 'Agenda',
-    image: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=1200&q=80',
-  },
-  {
-    id: 5,
-    title: 'Feira Literaria',
-    subtitle: 'Autores e editoras em encontro especial',
-    // price: 'Literatura',
-    // oldPrice: 'Evento',
-    image: 'https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=1200&q=80',
-  },
-  {
-    id: 6,
-    title: 'Patrimonio Historico',
-    subtitle: 'Projeto valoriza memoria e identidade',
-    // price: 'Historia',
-    // oldPrice: 'Especial',
-    image: 'https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?auto=format&fit=crop&w=1200&q=80',
-  },
-  {
-    id: 7,
-    title: 'Patrimonio Historico',
-    subtitle: 'Projeto valoriza memoria e identidade',
-    // price: 'Historia',
-    // oldPrice: 'Especial',
-    image: 'https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?auto=format&fit=crop&w=1200&q=80',
-  },{
-   id: 8,
-    title: 'Patrimonio Historico',
-    subtitle: 'Projeto valoriza memoria e identidade',
-    // price: 'Historia',
-    // oldPrice: 'Especial',
-    image: 'https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?auto=format&fit=crop&w=1200&q=80',
+    title: 'Servico de transporte de/para Paraty',
+    image:
+      'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1200&q=80',
   },
 ];
 
 export default function Cards() {
   return (
-    <section className='w-full  px-6 py-10'>
-      <div className='mx-auto flex w-[90%] flex-row flex-wrap justify-between gap-y-6'>
-        {cards.map((card) => (
-          <article
-            key={card.id}
-            className='flex w-full flex-col overflow-hidden rounded-none sm:w-[48%] lg:w-[24%]'
-          >
-            <div className='relative h-52 w-full'>
-              <img
-                src={card.image}
-                alt={card.title}
-                className='h-full w-full object-cover'
-              />
-              <span className=''>
-                {/* Sale */}
-              </span>
-            </div>
+    <section className='w-full  px-4 py-10 md:px-8'>
+      <div className='mx-auto w-full max-w-6xl'>
+        <article className='grid gap-6 rounded-sm  md:grid-cols-[1.05fr_1.95fr]'>
+          <div className='h-64 w-full md:h-[260px]'>
+            <img
+              src={featuredCard.image}
+              alt={featuredCard.title}
+              className='h-full w-full rounded-sm object-cover'
+            />
+          </div>
 
-            <div className='w-full p-4'>
-              <h3 className='text-lg font-bold text-gray-900'>{card.title}</h3>
-              <p className='mt-1 text-sm text-gray-500'>{card.subtitle}</p>
+          <div className='flex flex-col justify-center'>
+            <h2 className='text-3xl font-extrabold leading-tight text-[#0e133a] md:text-4xl'>
+              {featuredCard.title}
+            </h2>
+            <p className='mt-4 text-xl font-bold text-[#0e133a]'>
+              {featuredCard.headline}
+            </p>
+            <p className='mt-2 text-lg leading-relaxed text-[#303030]'>
+              <span className='font-semibold text-[#5d7fd6]'>Concertos Candlelight</span>{' '}
+              trazem a magia de uma experiencia musical multi-sensorial ao vivo para locais
+              inspiradores nunca antes utilizado para este proposito em Sao Paulo.
+            </p>
+          </div>
+        </article>
 
-              <button className='mt-4 w-full rounded-lg bg-indigo-600 py-2 text-sm font-medium text-white transition-colors hover:bg-indigo-700'>
-                Ver detalhes
-              </button>
-            </div>
-          </article>
-        ))}
+        <div className='mt-10 grid gap-5 md:grid-cols-3'>
+          {cards.map((card) => (
+            <article key={card.id} className='overflow-hidden rounded-xl bg-transparent'>
+              <div className='h-60 w-full'>
+                <img
+                  src={card.image}
+                  alt={card.title}
+                  className='h-full w-full rounded-xl object-cover'
+                />
+              </div>
+
+              <h3 className='mt-3 text-2xl font-semibold leading-tight text-[#4465b7]'>
+                {card.title}
+              </h3>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   );

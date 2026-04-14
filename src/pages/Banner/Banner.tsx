@@ -13,10 +13,6 @@ function Banner() {
     setIndex((prev) => (prev + 1) % banners.length);
   };
 
-  const prevSlide = () => {
-    setIndex((prev) => (prev - 1 + banners.length) % banners.length);
-  };
-
   // autoplay (opcional)
   useEffect(() => {
     const interval = setInterval(nextSlide, 4000);
@@ -24,7 +20,7 @@ function Banner() {
   }, []);
 
   return (
-    <div className="relative w-full h-[400px] overflow-hidden">
+    <div className="relative h-[400px] w-full overflow-hidden">
       {/* Slides */}
       <div
         className="flex transition-transform duration-500"
@@ -40,9 +36,22 @@ function Banner() {
         ))}
       </div>
 
-      
+      <div className="absolute inset-0 bg-black/35" />
+
+      <div className="absolute inset-0 z-10 flex flex-col items-center justify-center px-4 text-center">
+        <h2 className="max-w-6xl text-xl font-bold leading-tight text-white md:text-6xl">
+          Descubra eventos, artistas
+          <br />
+          e espaços culturais da sua região
+        </h2>
+
+        <button className="mt-8 rounded-md bg-[#4b2ad6] px-8 py-3 text-base font-medium text-white transition hover:bg-[#3f22b9]">
+          Saiba Mais
+        </button>
+      </div>
+
       {/* Indicadores */}
-      <div className="absolute bottom-4 w-full flex justify-center gap-2">
+      <div className="absolute bottom-4 z-20 flex w-full justify-center gap-2">
         {banners.map((_, i) => (
           <div
             key={i}
