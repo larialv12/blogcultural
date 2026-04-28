@@ -45,7 +45,7 @@ function Banner() {
           e espaços culturais da sua região
         </h2>
 
-        <button className="mt-8 rounded-md bg-[#4b2ad6] px-8 py-3 text-base font-medium text-white transition hover:bg-[#3f22b9]">
+        <button className="mt-8 rounded-md bg-[#0CABA8] px-8 py-3 text-base font-medium text-white transition hover:bg-[#0CABA8]">
           Saiba Mais
         </button>
       </div>

@@ -1,77 +1,130 @@
 import React from 'react';
 
-const featuredCard = {
-  title: 'Concertos Candlelight em Sao Paulo',
-  headline: 'Candlelight traz para voce a melhor musica de uma forma nunca antes vista!',
-  image:
-    'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1200&q=80',
-};
-
 const cards = [
   {
     id: 1,
-    title: 'Pinte um quadro ou taca com um artista',
+    date: '16 MAR',
+    category: 'MUSICA',
+    title: 'Noite de Jazz ao Vivo',
+    location: 'Teatro Bradesco, Sao Paulo',
+    price: 'A partir de R$ 80',
     image:
-      'https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1200&q=80',
   },
   {
     id: 2,
-    title: 'Traslado privativo do aeroporto de Guarulhos (GRU) para Sao Paulo',
+    date: '22 MAR',
+    category: 'EXPOSICAO',
+    title: 'Arte Imersiva: Luz e Cor',
+    location: 'Pinacoteca, Sao Paulo',
+    price: 'Ingressos R$ 55',
     image:
-      'https://images.unsplash.com/photo-1606836591695-4d58a73eba1e?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=1200&q=80',
   },
   {
     id: 3,
-    title: 'Servico de transporte de/para Paraty',
+    date: '04 ABR',
+    category: 'GASTRONOMIA',
+    title: 'Festival Sabores de Rua',
+    location: 'Vila Madalena, Sao Paulo',
+    price: 'Entrada gratuita',
     image:
-      'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=80',
+  },
+  {
+    id: 4,
+    date: '04 ABR',
+    category: 'GASTRONOMIA',
+    title: 'Festival Sabores de Rua',
+    location: 'Vila Madalena, Sao Paulo',
+    price: 'Entrada gratuita',
+    image:
+      'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=80',
+  },
+  {
+    id: 5,
+    date: '10 ABR',
+    category: 'TEATRO',
+    title: 'Comedia em Cena',
+    location: 'Teatro UOL, Sao Paulo',
+    price: 'Ingressos R$ 60',
+    image:
+      'https://images.unsplash.com/photo-1503095396549-807759245b35?auto=format&fit=crop&w=1200&q=80',
+  },
+  {
+    id: 6,
+    date: '18 ABR',
+    category: 'CINEMA',
+    title: 'Mostra Cinema Brasileiro',
+    location: 'Centro Cultural Sao Paulo',
+    price: 'A partir de R$ 35',
+    image:
+      'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1200&q=80',
+  },
+  {
+    id: 7,
+    date: '25 ABR',
+    category: 'FEIRA',
+    title: 'Feira de Design Independente',
+    location: 'Galeria Central, Sao Paulo',
+    price: 'Entrada gratuita',
+    image:
+      'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1200&q=80',
   },
 ];
 
 export default function Cards() {
+  const [card1, card2, card3, card4, card5, card6, card7] = cards;
+
+  const renderCard = (card: (typeof cards)[number], compact = false) => (
+    <article
+      key={card.id}
+      className='group relative h-full w-full overflow-hidden rounded-[16px]'
+    >
+      <img
+        src={card.image}
+        alt={card.title}
+        className='h-full w-full object-cover transition duration-500 group-hover:scale-110'
+      />
+      <div className='absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/90' />
+
+      <div className='absolute inset-x-0 bottom-0 z-10 p-4 text-white'>
+        <p className='text-xs font-semibold tracking-wider text-cyan-200'>{card.date}</p>
+        <h3 className={`${compact ? 'text-base' : 'text-2xl'} mt-1 line-clamp-2 font-bold leading-tight`}>
+          {card.title}
+        </h3>
+        {!compact && <p className='mt-2 text-sm text-slate-200'>{card.location}</p>}
+      </div>
+    </article>
+  );
+
   return (
-    <section className='w-full  px-4 py-10 md:px-8'>
-      <div className='mx-auto w-full max-w-6xl'>
-        <article className='grid gap-6 rounded-sm  md:grid-cols-[1.05fr_1.95fr]'>
-          <div className='h-64 w-full md:h-[260px]'>
-            <img
-              src={featuredCard.image}
-              alt={featuredCard.title}
-              className='h-full w-full rounded-sm object-cover'
-            />
+    <section className='w-full px-4 py-12 md:px-8'>
+      <div className='mx-auto w-full max-w-[1500px]'>
+        <div className='mb-5 text-center'>
+          
+          <h2 className='mt-2 text-6xl font-bold leading-tight text-white md:text-3xl xl:text-3xl'>
+            Eventos em destaque
+          </h2>
+          <p className='mt-6 text-base font-bold text-[#0FC2C0] sm:text-lg'>
+            Descubra shows, exposicoes, teatro e experiencias unicas para aproveitar o
+            melhor da cena cultural da cidade nesta semana.
+          </p>
+        </div>
+
+        <div className='grid gap-4'>
+          <div className='grid grid-cols-1 gap-4 md:grid-cols-4'>
+            <div className='md:col-span-2 h-[320px]'>{renderCard(card1)}</div>
+            <div className='h-[320px]'>{renderCard(card2, true)}</div>
+            <div className='h-[320px]'>{renderCard(card3, true)}</div>
           </div>
 
-          <div className='flex flex-col justify-center'>
-            <h2 className='text-3xl font-extrabold leading-tight text-[#0e133a] md:text-4xl'>
-              {featuredCard.title}
-            </h2>
-            <p className='mt-4 text-xl font-bold text-[#0e133a]'>
-              {featuredCard.headline}
-            </p>
-            <p className='mt-2 text-lg leading-relaxed text-[#303030]'>
-              <span className='font-semibold text-[#5d7fd6]'>Concertos Candlelight</span>{' '}
-              trazem a magia de uma experiencia musical multi-sensorial ao vivo para locais
-              inspiradores nunca antes utilizado para este proposito em Sao Paulo.
-            </p>
+          <div className='grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4'>
+            <div className='h-[230px]'>{renderCard(card4, true)}</div>
+            <div className='h-[230px]'>{renderCard(card5, true)}</div>
+            <div className='h-[230px]'>{renderCard(card6, true)}</div>
+            <div className='h-[230px]'>{renderCard(card7, true)}</div>
           </div>
-        </article>
-
-        <div className='mt-10 grid gap-5 md:grid-cols-3'>
-          {cards.map((card) => (
-            <article key={card.id} className='overflow-hidden rounded-xl bg-transparent'>
-              <div className='h-60 w-full'>
-                <img
-                  src={card.image}
-                  alt={card.title}
-                  className='h-full w-full rounded-xl object-cover'
-                />
-              </div>
-
-              <h3 className='mt-3 text-2xl font-semibold leading-tight text-[#4465b7]'>
-                {card.title}
-              </h3>
-            </article>
-          ))}
         </div>
       </div>
     </section>
