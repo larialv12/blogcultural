@@ -1,5 +1,3 @@
-import React from 'react';
-
 const cards = [
   {
     id: 1,
@@ -106,7 +104,7 @@ export default function Cards() {
           <h2 className='mt-2 text-6xl font-bold leading-tight text-white md:text-3xl xl:text-3xl'>
             Eventos em destaque
           </h2>
-          <p className='mt-6 text-base font-bold text-[#0FC2C0] sm:text-lg'>
+          <p className='mt-6 text-base font-bold text-brand-accent sm:text-lg'>
             Descubra shows, exposicoes, teatro e experiencias unicas para aproveitar o
             melhor da cena cultural da cidade nesta semana.
           </p>

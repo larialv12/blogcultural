@@ -1,31 +1,31 @@
 function Menu() {
   return (
-    <header className='  w-fullbg-#023535 px-4 py-3 shadow-sm md:px-8'>
+    <header className='w-full bg-brand-dark px-4 py-3 shadow-sm md:px-8'>
       <div className='flex w-full items-center justify-between'>
-        <a href='#' className='flex items-center gap-2 text-[#4c5160]'>
+        <a href='#' className='flex items-center gap-2 text-brand-nav'>
         
               <p className='text-sm font-bold uppercase tracking-[0.2em] text-white md:text-base'>
             Agenda cultural
           </p>        </a>
 
         <nav className='hidden items-center gap-8 text-xs font-semibold text-white md:flex'>
-          <a href='#' className='transition hover:text-[#2e3340]'>
+          <a href='#' className='transition hover:text-brand-nav-hover'>
             Eventos
           </a>
-          <a href='#' className='transition hover:text-[#2e3340]'>
+          <a href='#' className='transition hover:text-brand-nav-hover'>
             Artistas
           </a>
-          <a href='#' className='transition hover:text-[#2e3340]'>
+          <a href='#' className='transition hover:text-brand-nav-hover'>
             Locais
           </a>
-          <a href='#' className='transition hover:text-[#2e3340]'>
+          <a href='#' className='transition hover:text-brand-nav-hover'>
             Blog
           </a>
         </nav>
 
         <a
           href='#divulga'
-          className='rounded-md bg-[#0CABA8] px-5 py-2 text-xs font-semibold text-white transition hover:bg-[#4a38d4]'
+          className='rounded-md bg-brand-medium px-5 py-2 text-xs font-semibold text-white transition hover:bg-brand-purple'
         >
           Cadastre-se
         </a>

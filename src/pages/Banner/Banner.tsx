@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 const banners = [
   "https://images.unsplash.com/photo-1636930435433-32351efb0efc?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -45,7 +45,7 @@ function Banner() {
           e espaços culturais da sua região
         </h2>
 
-        <button className="mt-8 rounded-md bg-[#0CABA8] px-8 py-3 text-base font-medium text-white transition hover:bg-[#0CABA8]">
+        <button className="mt-8 rounded-md bg-brand-medium px-8 py-3 text-base font-medium text-white transition hover:bg-brand-medium">
           Saiba Mais
         </button>
       </div>
