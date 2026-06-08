@@ -6,6 +6,7 @@
 
  O Blog Cultural é uma aplicação web desenvolvida para divulgar eventos culturais regionais, permitindo o cadastro e a visualização de artistas e eventos. O projeto foi criado para fins de estudo utilizando React, TypeScript, Tailwind CSS e Vite.
 
+<img width="1056" height="2048" alt="image" src="https://github.com/user-attachments/assets/f2d51367-5f05-4586-8e23-ccf191daea50" />
 
 ## Sumário
 
