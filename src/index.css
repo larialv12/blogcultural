@@ -13,11 +13,26 @@
     --color-brand-nav: #4c5160;
     --color-brand-nav-hover: #2e3340;
     --color-brand-purple: #4a38d4;
+    --color-brand-surface: #ffffff;
+    --color-brand-surface-muted: #f8fafc;
     --color-brand-overlay: rgba(0, 0, 0, 0.45);
 }
 
-body {
-    background-color: var(--color-brand-dark);
+@layer base {
+    * {
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        margin: 0;
+        min-width: 320px;
+        background-color: var(--color-brand-dark);
+        color: white;
+    }
 }
 
 .bg-brand-gradient {
