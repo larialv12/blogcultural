@@ -25,8 +25,11 @@ function Divulga() {
           </p>
 
           <div className='mt-9 grid gap-4 sm:grid-cols-2'>
+             <ModalEvento/>
+
             <ModalArtista/>
-            <ModalEvento/>
+
+
           </div>
         </div>
       </div>

@@ -11,7 +11,7 @@ function ModalEvento() {
           <button
             className='  border border-brand-accent rounded-md  px-5 py-2 text-xs font-semibold text-white transition hover:bg-brand-accent'
           >
-            Artista
+            Evento
           </button>
         }
         modal

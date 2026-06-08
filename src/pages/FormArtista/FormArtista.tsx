@@ -4,15 +4,16 @@ import 'reactjs-popup/dist/index.css';
 
 function FormArtista() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-slate-100">
-      <div className="bg-white rounded-2xl shadow-lg w-full max-w-2xl p-10">
-        <h1 className="text-5xl text-center mb-12">
+    // <div className="min-h-screen flex items-center justify-center bg-slate-100">
+      <div className=" bg-brand-gradient rounded-2xl shadow-lg w-full max-w-2xl p-10">
+        <h3 className="text-5xl text-center mb-12 color-brand-surface">
           Cadastro de Artista
-        </h1>
+        </h3>
 
         <form className="flex flex-col gap-6">
           <div className="flex flex-col gap-2">
-            <label htmlFor="nome" className="text-lg">
+            <label     htmlFor="nome"
+              className="text-lg font-medium color-brand-surface">
               Nome
             </label>
 
@@ -43,13 +44,13 @@ function FormArtista() {
 
           <button
             type="submit"
-            className="bg-indigo-400 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-md w-48 mx-auto transition duration-300"
+            className="bg-brand-medium hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-md w-48 mx-auto transition duration-300"
           >
             Cadastrar
           </button>
         </form>
       </div>
-    </div>
+    // </div>
   );
 }
 
