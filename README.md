@@ -1,10 +1,11 @@
-# Blog Cultural
+# blogcultural
 
-![GitHub license](https://img.shields.io/github/license/larialv12/blog-cultural)
-![GitHub stars](https://img.shields.io/github/stars/larialv12/blog-cultural)
-![GitHub issues](https://img.shields.io/github/issues/larialv12/blog-cultural)
+![GitHub license](https://img.shields.io/github/license/larialv12/blogcultural)
+![GitHub stars](https://img.shields.io/github/stars/larialv12/blogcultural)
+![GitHub issues](https://img.shields.io/github/issues/larialv12/blogcultural)
 
-O Blog Cultural é um projeto fictício que tem o propósito de divulgar eventos regionais.
+ O Blog Cultural é uma aplicação web desenvolvida para divulgar eventos culturais regionais, permitindo o cadastro e a visualização de artistas e eventos. O projeto foi criado para fins de estudo utilizando React, TypeScript, Tailwind CSS e Vite.
+
 
 ## Sumário
 
@@ -17,8 +18,11 @@ O Blog Cultural é um projeto fictício que tem o propósito de divulgar eventos
 
 ## Funcionalidades
 
-- Cadastro de evento
-- Cadastro de Artistas
+- - Cadastro de eventos culturais
+- - Cadastro de artistas
+- - Listagem de eventos
+- - Exibição de detalhes dos artistas
+- - Interface responsiva
 
 ## Tecnologias
 
@@ -31,19 +35,19 @@ O Blog Cultural é um projeto fictício que tem o propósito de divulgar eventos
 
 ```bash
 # Clone o repositório
-git clone https://github.com/larialv12/blog-cultural.git
+git clone https://github.com/larialv12/blogcultural
 
 # Entre no diretório
-cd blog-cultural
+cd blogcultural
 
-# Instaleências
+# Instale as dependências
 npm install
 ```
 
 ## Como usar
 
 ```bash
-npm start
+npm run dev
 ```
 
 ## Contribuindo
