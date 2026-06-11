@@ -1,5 +1,4 @@
-import ModalArtista from "../modalArtista/modalArtista"
-
+import ModalArtista from "../modalArtista/ModalArtista"
 import ModalEvento from "../modalEvento/modalEvento"
 
 function Divulga() {
