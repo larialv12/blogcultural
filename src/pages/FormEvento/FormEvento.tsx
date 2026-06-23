@@ -24,7 +24,10 @@ function FormEvento({ onAddEvent }: FormEventoProps) {
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
 
-    if (!form.title.trim() || !form.date.trim() || !form.location.trim() || !form.category.trim()) return
+    const requiredFields = ['title', 'date', 'location', 'category'] as const
+    const hasEmptyRequiredField = requiredFields.some((field) => !form[field].trim())
+
+    if (hasEmptyRequiredField) return
 
     onAddEvent({
       id: Date.now(),

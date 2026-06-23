@@ -1,31 +1,6 @@
 import heroImage from '../../assets/hero.jpg'
 
-const highlights = [
-  {
-    title: 'Diversidade',
-    text: 'Mostramos manifestações artísticas de diferentes estilos, regiões e gerações.',
-  },
-  {
-    title: 'Comunidade',
-    text: 'Unimos artistas, público e organizadores em uma mesma agenda cultural.',
-  },
-  {
-    title: 'Conexão',
-    text: 'Facilitamos o encontro entre quem cria, quem participa e quem divulga.',
-  },
-  {
-    title: 'Eventos',
-    text: 'Reunimos programações culturais dos mais variados formatos e estilos.',
-  },
-  {
-    title: 'Artistas',
-    text: 'Apresentamos perfis para descobrir novas referências da cena local.',
-  },
-  {
-    title: 'Divulgação',
-    text: 'Criamos espaço para fortalecer a produção cultural independente.',
-  },
-]
+
 
 function Sobre() {
   return (
