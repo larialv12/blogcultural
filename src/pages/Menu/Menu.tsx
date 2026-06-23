@@ -9,17 +9,14 @@ function Menu() {
         </a>
 
         <nav className='hidden items-center gap-8 text-xs font-semibold text-white md:flex'>
-          <a href='#' className='transition hover:text-brand-nav-hover'>
+          <a href='#eventos' className='transition hover:text-brand-nav-hover'>
             Eventos
           </a>
-          <a href='#' className='transition hover:text-brand-nav-hover'>
+          <a href='#artistas' className='transition hover:text-brand-nav-hover'>
             Artistas
           </a>
-          <a href='#' className='transition hover:text-brand-nav-hover'>
-            Locais
-          </a>
-          <a href='#' className='transition hover:text-brand-nav-hover'>
-            Blog
+          <a href='#sobre' className='transition hover:text-brand-nav-hover'>
+            Sobre
           </a>
         </nav>
 
