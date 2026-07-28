@@ -48,7 +48,7 @@ function Banner() {
   }, [])
 
   return (
-    <section className='relative h-[420px] w-full overflow-hidden md:h-[490px]'>
+    <section className='banner-section relative h-[420px] w-full overflow-hidden md:h-[490px]'>
       <div
         className='flex h-full transition-transform duration-700 ease-out'
         style={{ transform: `translateX(-${index * 100}%)` }}
@@ -65,7 +65,7 @@ function Banner() {
 
       <div className='absolute inset-0 bg-gradient-to-r from-brand-dark via-brand-dark/80 to-black/25' />
 
-      <div className='absolute inset-0 z-10 flex items-center justify-center px-4 md:px-8'>
+      <div className='banner-content absolute inset-0 z-10 flex items-center justify-center px-4 pb-20 md:px-8 md:pb-0'>
         <div className='w-full max-w-3xl text-center'>
           <div>
             <p className='text-sm font-semibold uppercase tracking-[0.35em] text-brand-accent'>
@@ -105,7 +105,7 @@ function Banner() {
         </div>
       </div>
 
-      <div className='absolute bottom-5 z-20 flex w-full justify-center gap-2'>
+      <div className='banner-dots absolute bottom-4 z-20 flex w-full justify-center gap-2 md:bottom-5'>
         {banners.map((banner, i) => (
           <button
             key={banner.title}

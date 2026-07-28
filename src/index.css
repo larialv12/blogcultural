@@ -35,6 +35,20 @@
     }
 }
 
+@media (max-width: 767px) {
+    .banner-section {
+        height: 520px;
+    }
+
+    .banner-content {
+        padding-bottom: 5rem;
+    }
+
+    .banner-dots {
+        bottom: 1rem;
+    }
+}
+
 .bg-brand-gradient {
     background: linear-gradient(
         90deg,
